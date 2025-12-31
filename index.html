@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shankar Pentyala - DevOps & Platform Engineer</title>
+    <title>Shankar Pentyala • DevOps Engineer</title>
     <style>
         * {
             margin: 0;
@@ -11,503 +11,533 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --bg: #ffffff;
+            --text: #0a0a0a;
+            --text-secondary: #525252;
+            --text-tertiary: #737373;
+            --border: #e5e5e5;
+            --hover: #fafafa;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0a0a0a;
+            --text: #fafafa;
+            --text-secondary: #a3a3a3;
+            --text-tertiary: #737373;
+            --border: #262626;
+            --hover: #171717;
+            --accent: #60a5fa;
+            --accent-hover: #3b82f6;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f5f5f5;
-        }
-
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
-            background-size: cover;
-            opacity: 0.3;
-        }
-
-        header h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-            position: relative;
-            z-index: 1;
-        }
-
-        header p {
-            font-size: 1.3em;
-            margin-bottom: 30px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .contact-info a {
-            color: white;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 20px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 25px;
-            transition: all 0.3s;
-        }
-
-        .contact-info a:hover {
-            background: rgba(255,255,255,0.3);
-            transform: translateY(-2px);
-        }
-
-        nav {
-            background: white;
-            padding: 15px 20px;
-            position: sticky;
-            top: 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            z-index: 100;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #764ba2;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.65;
+            color: var(--text);
+            background: var(--bg);
+            transition: background 0.2s ease, color 0.2s ease;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 680px;
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 80px 24px;
         }
 
-        section {
-            background: white;
-            margin-bottom: 30px;
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            margin-bottom: 80px;
+            font-size: 14px;
+            letter-spacing: -0.01em;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--text);
+        }
+
+        .theme-toggle {
+            margin-left: auto;
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 6px;
+            opacity: 0.6;
+            transition: opacity 0.2s ease;
+        }
+
+        .theme-toggle:hover {
+            opacity: 1;
+        }
+
+        header {
+            margin-bottom: 80px;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 16px;
+            color: var(--text);
+            line-height: 1.2;
+        }
+
+        .headline {
+            font-size: 20px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.2s ease;
+            letter-spacing: -0.01em;
+        }
+
+        .contact-links a:hover {
+            color: var(--accent-hover);
         }
 
         h2 {
-            color: #667eea;
-            font-size: 2.2em;
-            margin-bottom: 30px;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 10px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 80px 0 32px 0;
+            color: var(--text-tertiary);
         }
 
-        .experience-item, .project-item {
-            margin-bottom: 35px;
-            padding-left: 25px;
-            border-left: 3px solid #764ba2;
+        .intro-text {
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
         }
 
-        .experience-item h3, .project-item h3 {
-            color: #333;
-            font-size: 1.5em;
-            margin-bottom: 5px;
+        .highlights {
+            list-style: none;
+            padding: 0;
         }
 
-        .experience-item .meta {
-            color: #666;
-            font-style: italic;
-            margin-bottom: 15px;
+        .highlights li {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
         }
 
-        .experience-item ul, .project-item ul {
-            margin-left: 20px;
-            margin-top: 10px;
+        .highlights li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--text-tertiary);
+            font-weight: 400;
         }
 
-        .experience-item li, .project-item li {
+        .experience-item {
+            margin-bottom: 56px;
+        }
+
+        .job-header {
+            margin-bottom: 16px;
+        }
+
+        .job-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 6px;
+            letter-spacing: -0.02em;
+        }
+
+        .job-company {
+            font-size: 15px;
+            color: var(--text-secondary);
+        }
+
+        .job-meta {
+            font-size: 14px;
+            color: var(--text-tertiary);
+            margin-bottom: 16px;
+        }
+
+        .job-description {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .job-highlights {
+            list-style: none;
+            padding: 0;
+        }
+
+        .job-highlights li {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-secondary);
             margin-bottom: 8px;
+            padding-left: 18px;
+            position: relative;
         }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
+        .job-highlights li:before {
+            content: "•";
+            position: absolute;
+            left: 4px;
+            color: var(--text-tertiary);
         }
 
-        .skill-category {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 25px;
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-5px);
-        }
-
-        .skill-category h3 {
-            color: #667eea;
-            margin-bottom: 15px;
-            font-size: 1.2em;
-        }
-
-        .skill-tags {
+        .skills-list {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
+            margin-top: 24px;
         }
 
         .skill-tag {
-            background: white;
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-size: 0.9em;
-            color: #555;
+            background: var(--hover);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            transition: all 0.2s ease;
         }
 
-        .certifications {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+        .skill-tag:hover {
+            border-color: var(--text-tertiary);
         }
 
-        .cert-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s;
+        .project-item {
+            margin-bottom: 32px;
         }
 
-        .cert-card:hover {
-            transform: scale(1.05);
+        .project-title {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 8px;
+            letter-spacing: -0.01em;
+        }
+
+        .project-description {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-secondary);
         }
 
         .education-item {
-            margin-bottom: 25px;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 8px;
+            margin-bottom: 24px;
         }
 
-        .education-item h3 {
-            color: #667eea;
-            margin-bottom: 5px;
+        .degree {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 4px;
+            letter-spacing: -0.01em;
+        }
+
+        .school-info {
+            font-size: 14px;
+            color: var(--text-tertiary);
+        }
+
+        .cert-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .cert-list li {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+            padding-left: 18px;
+            position: relative;
+        }
+
+        .cert-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 600;
         }
 
         footer {
-            background: #333;
-            color: white;
+            margin-top: 120px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
             text-align: center;
-            padding: 30px 20px;
-            margin-top: 50px;
+            color: var(--text-tertiary);
+            font-size: 13px;
         }
 
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-            
-            section {
-                padding: 30px 20px;
+        @media (max-width: 640px) {
+            .container {
+                padding: 48px 20px;
             }
 
-            nav ul {
-                gap: 20px;
+            h1 {
+                font-size: 32px;
+            }
+
+            .headline {
+                font-size: 18px;
+            }
+
+            nav {
+                margin-bottom: 56px;
+            }
+
+            h2 {
+                margin-top: 64px;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Shankar Pentyala</h1>
-        <p>DevOps & Platform Engineer | LLMOps | Cloud Native Infrastructure</p>
-        <div class="contact-info">
-            <a href="mailto:pentyalashankar@gmail.com">📧 Email</a>
-            <a href="tel:+19167559527">📞 (916) 755-9527</a>
-            <a href="https://www.linkedin.com/in/shankar43/" target="_blank">💼 LinkedIn</a>
-            <a href="https://github.com/shankarpentyala07" target="_blank">💻 GitHub</a>
-            <a href="https://medium.com/@pentyalashankar_75390" target="_blank">✍️ Medium</a>
-        </div>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-        </ul>
-    </nav>
-
     <div class="container">
+        <nav>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+        </nav>
+
+        <header>
+            <h1>Shankar Pentyala</h1>
+            <p class="headline">DevOps Engineer specializing in cloud infrastructure, LLM operations, and platform engineering.</p>
+            <div class="contact-links">
+                <a href="mailto:pentyalashankar@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/shankar43/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/shankarpentyala07" target="_blank">GitHub</a>
+                <a href="https://medium.com/@pentyalashankar_75390" target="_blank">Medium</a>
+                <a href="tel:+19167559527">Call</a>
+            </div>
+        </header>
+
         <section id="about">
-            <h2>Professional Summary</h2>
-            <p>DevOps and Platform Engineer with over 7 years of experience in designing, deploying, and managing scalable cloud-native infrastructure across AWS, Azure, and IBM Cloud. Proven expertise in LLM hosting, OpenShift, Terraform, CI/CD automation, GPU workloads, and hybrid cloud environments. Strong background in customer-facing roles, production support, and multi-region SaaS deployments.</p>
+            <h2>Overview</h2>
+            <p class="intro-text">
+                I'm a DevOps and Platform Engineer with over 7 years of experience designing and managing scalable cloud-native infrastructure. Currently focused on LLM operations at IBM, where I manage inference clusters serving production AI workloads across AWS and IBM Cloud.
+            </p>
+            <p class="intro-text">
+                My work sits at the intersection of cloud infrastructure and artificial intelligence—building the systems that power enterprise AI applications at scale.
+            </p>
+            <ul class="highlights">
+                <li>Managing 20+ inference clusters for LLMs including LLaMA, Mistral, and Granite</li>
+                <li>Deploying and optimizing NVIDIA GPU workloads (H200, H100, A100) for model serving</li>
+                <li>Building multi-cloud infrastructure across AWS, Azure, and IBM Cloud</li>
+                <li>Certified Kubernetes Administrator with deep expertise in OpenShift</li>
+            </ul>
         </section>
 
         <section id="experience">
-            <h2>Professional Experience</h2>
-            
+            <h2>Experience</h2>
+
             <div class="experience-item">
-                <h3>LLMOps Developer</h3>
-                <div class="meta">IBM – San Jose, CA | July 2024 – Present</div>
-                <ul>
-                    <li>Manage 20+ inference clusters for SaaS LLMs (LLaMA, Mistral, Granite, embedding models) across AWS and IBM Cloud</li>
-                    <li>Deploy and monitor NVIDIA GPUs (H200, H100, A100, L40, L4) for large-scale model serving</li>
-                    <li>Debug and resolve latency, prompt, and compliance issues (HAP Guardrails, PII detectors)</li>
+                <div class="job-header">
+                    <div class="job-title">LLMOps Developer</div>
+                    <div class="job-company">IBM</div>
+                    <div class="job-meta">San Jose, CA • July 2024 – Present</div>
+                </div>
+                <p class="job-description">
+                    Managing production infrastructure for enterprise LLM deployments, ensuring high availability and performance for AI workloads serving thousands of concurrent users.
+                </p>
+                <ul class="job-highlights">
+                    <li>Orchestrate 20+ inference clusters across AWS and IBM Cloud for LLaMA, Mistral, and Granite models</li>
+                    <li>Deploy and monitor NVIDIA GPU infrastructure (H200, H100, A100, L40, L4) for large-scale model serving</li>
+                    <li>Debug and resolve latency, prompt processing, and compliance issues with HAP Guardrails and PII detectors</li>
                     <li>Contribute to Azure governance through policy creation and compliance automation</li>
                 </ul>
             </div>
 
             <div class="experience-item">
-                <h3>Platform Engineer</h3>
-                <div class="meta">IBM – San Jose, CA | March 2022 – June 2024</div>
-                <ul>
-                    <li>Led onboarding of watsonx.ai and Cloud Pak for Data BYOL offerings to AWS Marketplace with 1-click deployment support</li>
+                <div class="job-header">
+                    <div class="job-title">Platform Engineer</div>
+                    <div class="job-company">IBM</div>
+                    <div class="job-meta">San Jose, CA • March 2022 – June 2024</div>
+                </div>
+                <p class="job-description">
+                    Led platform initiatives bringing IBM's AI and data products to AWS Marketplace, focusing on infrastructure automation and multi-cloud deployments.
+                </p>
+                <ul class="job-highlights">
+                    <li>Led onboarding of watsonx.ai and Cloud Pak for Data BYOL offerings to AWS Marketplace with 1-click deployment</li>
                     <li>Automated end-to-end infrastructure provisioning using Terraform, Ansible, and Jenkins</li>
-                    <li>Deployed ROSA clusters on AWS GovCloud with NetApp FSx and installed LLMs for prompt tuning</li>
+                    <li>Deployed ROSA clusters on AWS GovCloud with NetApp FSx integration for LLM prompt tuning workloads</li>
                     <li>Developed Go CLI tools for network diagnostics and cloud service workflows</li>
-                    <li>Maintained and debugged multi-cloud OpenShift clusters, addressing storage, networking, and infrastructure issues</li>
+                    <li>Maintained multi-cloud OpenShift clusters, resolving storage, networking, and infrastructure issues</li>
                 </ul>
             </div>
 
             <div class="experience-item">
-                <h3>Client Experience Engineer</h3>
-                <div class="meta">IBM – Kansas City, MO | February 2019 – February 2022</div>
-                <ul>
+                <div class="job-header">
+                    <div class="job-title">Client Experience Engineer</div>
+                    <div class="job-company">IBM</div>
+                    <div class="job-meta">Kansas City, MO • February 2019 – February 2022</div>
+                </div>
+                <p class="job-description">
+                    Provided technical support and automation for enterprise customers running MLOps platforms and container orchestration at scale.
+                </p>
+                <ul class="job-highlights">
                     <li>Supported 1,000+ customers on Cloud Pak for Data (MLOps Platform) and OpenShift platforms</li>
-                    <li>Automated OpenShift deployments across on-prem, AWS, Azure, and IBM Cloud</li>
+                    <li>Automated OpenShift deployments across on-premises, AWS, Azure, and IBM Cloud environments</li>
                     <li>Resolved 100+ Sev1 incidents as part of 24/7 support rotation, receiving multiple customer commendations</li>
                 </ul>
             </div>
 
             <div class="experience-item">
-                <h3>Software Developer</h3>
-                <div class="meta">Netcracker Technology – Hyderabad, India | August 2014 – December 2016</div>
-                <ul>
-                    <li>Designed and maintained AS400-based billing modules for Time Warner Cable using NetCracker ICOMS platform</li>
-                    <li>Delivered features like payment reminders, work order automation, and invoice auditing</li>
-                    <li>Ensured production data integrity across environments using DB2 SQL and internal tooling</li>
+                <div class="job-header">
+                    <div class="job-title">Software Developer</div>
+                    <div class="job-company">Netcracker Technology</div>
+                    <div class="job-meta">Hyderabad, India • August 2014 – December 2016</div>
+                </div>
+                <p class="job-description">
+                    Developed and maintained billing systems for telecommunications infrastructure, focusing on data integrity and automation.
+                </p>
+                <ul class="job-highlights">
+                    <li>Designed AS400-based billing modules for Time Warner Cable using NetCracker ICOMS platform</li>
+                    <li>Delivered features including payment reminders, work order automation, and invoice auditing</li>
+                    <li>Ensured production data integrity across environments using DB2 SQL</li>
                 </ul>
             </div>
         </section>
 
         <section id="skills">
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>☁️ Cloud Platforms</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">AWS</span>
-                        <span class="skill-tag">Azure</span>
-                        <span class="skill-tag">IBM Cloud</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>🐳 Containers & Orchestration</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Kubernetes</span>
-                        <span class="skill-tag">OpenShift</span>
-                        <span class="skill-tag">ROSA</span>
-                        <span class="skill-tag">Helm</span>
-                        <span class="skill-tag">Argo CD</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>⚙️ IaC & Automation</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Terraform</span>
-                        <span class="skill-tag">Ansible</span>
-                        <span class="skill-tag">CloudFormation</span>
-                        <span class="skill-tag">Jenkins</span>
-                        <span class="skill-tag">Shell Scripting</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>📊 Monitoring & Logging</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Prometheus</span>
-                        <span class="skill-tag">Grafana</span>
-                        <span class="skill-tag">Kibana</span>
-                        <span class="skill-tag">CloudWatch</span>
-                        <span class="skill-tag">Instana</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>💻 Programming Languages</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Go</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">JavaScript</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>🗄️ Databases</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">MySQL</span>
-                        <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">Redis</span>
-                        <span class="skill-tag">Milvus</span>
-                        <span class="skill-tag">Db2</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>🤖 AI/ML & LLM</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">LLM Inference</span>
-                        <span class="skill-tag">GenAI</span>
-                        <span class="skill-tag">RAG</span>
-                        <span class="skill-tag">Multi-Modal</span>
-                        <span class="skill-tag">Agents</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>🔧 Other Technologies</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Linux</span>
-                        <span class="skill-tag">VPC</span>
-                        <span class="skill-tag">IAM</span>
-                        <span class="skill-tag">Route53</span>
-                        <span class="skill-tag">S3</span>
-                    </div>
-                </div>
+            <h2>Technical Expertise</h2>
+            <p class="intro-text">
+                Specialized in cloud-native infrastructure, container orchestration, and infrastructure as code with a focus on AI/ML workloads.
+            </p>
+            <div class="skills-list">
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">Azure</span>
+                <span class="skill-tag">IBM Cloud</span>
+                <span class="skill-tag">Kubernetes</span>
+                <span class="skill-tag">OpenShift</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Terraform</span>
+                <span class="skill-tag">Ansible</span>
+                <span class="skill-tag">Jenkins</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Go</span>
+                <span class="skill-tag">Prometheus</span>
+                <span class="skill-tag">Grafana</span>
+                <span class="skill-tag">LLM Inference</span>
+                <span class="skill-tag">GPU Workloads</span>
+                <span class="skill-tag">ROSA</span>
+                <span class="skill-tag">Helm</span>
+                <span class="skill-tag">Argo CD</span>
+                <span class="skill-tag">CloudFormation</span>
+                <span class="skill-tag">Kibana</span>
             </div>
         </section>
 
         <section id="projects">
-            <h2>Featured Projects</h2>
-            
+            <h2>Selected Projects</h2>
+
             <div class="project-item">
-                <h3>🤖 LangChain Chatbot</h3>
-                <p>Built a chatbot using LangChain, integrating OpenAI GPT-3.5-turbo and LLaMA4 for multi-LLM routing and prompt processing.</p>
+                <div class="project-title">LangChain Multi-LLM Chatbot</div>
+                <p class="project-description">
+                    Built an intelligent chatbot using LangChain with dynamic routing between OpenAI GPT-3.5-turbo and LLaMA4, implementing sophisticated prompt processing and model selection logic.
+                </p>
             </div>
 
             <div class="project-item">
-                <h3>📈 Kubernetes Monitoring System</h3>
-                <p>Implemented full-stack monitoring using Prometheus (alerting), Grafana (dashboards), and Kibana (logs) with Slack/email integrations, extended it via agents.</p>
+                <div class="project-title">Kubernetes Observability Platform</div>
+                <p class="project-description">
+                    Implemented comprehensive monitoring stack using Prometheus for alerting, Grafana for visualization, and Kibana for log aggregation. Extended with agent-based monitoring and integrated Slack/email notifications for incident response.
+                </p>
             </div>
 
             <div class="project-item">
-                <h3>🐦 Twitter Job Analytics</h3>
-                <p>Developed a pipeline to process 1M+ tweets to identify top hiring companies, in-demand skills, and job locations using Python and NLP.</p>
+                <div class="project-title">Twitter Job Market Analytics</div>
+                <p class="project-description">
+                    Developed NLP pipeline processing 1M+ tweets to identify hiring trends, in-demand technical skills, and emerging job markets. Built using Python with custom natural language processing algorithms.
+                </p>
             </div>
         </section>
 
-        <section id="education">
+        <section>
             <h2>Education</h2>
-            
+
             <div class="education-item">
-                <h3>Master's in Computer Science</h3>
-                <div class="meta">University of Missouri – Kansas City | January 2017 – December 2018</div>
+                <div class="degree">Master of Science in Computer Science</div>
+                <div class="school-info">University of Missouri – Kansas City • 2017 – 2018</div>
             </div>
 
             <div class="education-item">
-                <h3>Bachelor's in Electronics and Communication Engineering</h3>
-                <div class="meta">Osmania University | June 2010 – June 2014</div>
+                <div class="degree">Bachelor of Engineering in Electronics and Communication</div>
+                <div class="school-info">Osmania University • 2010 – 2014</div>
             </div>
         </section>
 
-        <section id="certifications">
+        <section>
             <h2>Certifications</h2>
-            <div class="certifications">
-                <div class="cert-card">
-                    <h3>🏆 Certified Kubernetes Administrator (CKA)</h3>
-                </div>
-                <div class="cert-card">
-                    <h3>☁️ AWS Certified Cloud Practitioner</h3>
-                </div>
-                <div class="cert-card">
-                    <h3>🤖 AWS Generative AI Fundamentals Specialization</h3>
-                </div>
-            </div>
+            <ul class="cert-list">
+                <li>Certified Kubernetes Administrator (CKA)</li>
+                <li>AWS Certified Cloud Practitioner</li>
+                <li>AWS Generative AI Fundamentals Specialization</li>
+            </ul>
         </section>
+
+        <footer>
+            <p>© 2025 Shankar Pentyala • San Jose, California</p>
+        </footer>
     </div>
 
-    <footer>
-        <p>© 2025 Shankar Pentyala. All rights reserved.</p>
-        <p>San Jose, CA | <a href="mailto:pentyalashankar@gmail.com" style="color: #667eea;">pentyalashankar@gmail.com</a></p>
-    </footer>
-
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            });
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', currentTheme);
+        themeToggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+
+        themeToggle.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const newTheme = current === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
         });
 
-        // Add fade-in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '0';
-                    entry.target.style.transform = 'translateY(20px)';
-                    entry.target.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                    
-                    setTimeout(() => {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }, 100);
-                    
-                    observer.unobserve(entry.target);
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
-        }, observerOptions);
-
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
         });
     </script>
 </body>
